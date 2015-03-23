@@ -1,0 +1,43 @@
+// Thuc Pham
+// Lab 6!
+
+import javax.swing.JOptionPane;
+
+public class Week6Lab6 
+
+{
+	public static void main(String[] args)
+{
+		int computerNum;
+		int player;
+		int count = 1;
+		
+		do
+		{
+			JOptionPane.showMessageDialog(null, "Game Number: " + count); count++;
+			
+		computerNum = 0 + (int)( Math.random()* 1);
+		
+		String playerinput = 
+						JOptionPane.showInputDialog( "Enter a number: ");
+		
+
+		player = Integer.parseInt(playerinput);
+		
+		if ((player < computerNum) || (player > computerNum ))
+		  JOptionPane.showMessageDialog(null, "Incorrect Guess! Guess again!\n");
+		
+		String message = 
+				String.format( "Random number is %d \n\n", computerNum );
+		    JOptionPane.showMessageDialog(null, message);
+		
+		}
+		while ((player != computerNum));
+
+			if (computerNum == player)
+				JOptionPane.showMessageDialog(null, "Correct Guess! Player Win!\n");
+			  JOptionPane.showMessageDialog(null, "Good Bye!");	
+		
+	
+}
+}
